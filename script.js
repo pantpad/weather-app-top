@@ -1,7 +1,7 @@
 const API_KEY = "a658fc69faf74c2c820205545232512";
 
 async function getData(QUERY) {
-  let url = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${QUERY}&aqi=no`;
+  let url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${QUERY}&aqi=no`;
   const response = await fetch(url, { mode: "cors" });
   const data = await response.json();
   if (!response.ok) {
